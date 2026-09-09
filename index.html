@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PERSONA GUIDE</title>
+<link rel="stylesheet" href="Style.css">
+</head>
+<body class="theme-p5r">
+<div class="transition-layer" id="transitionLayer"></div>
+<header class="site-header">
+  <a class="logo" href="#" data-page="home"><span class="logo-main">PERSONA</span><span class="logo-sub" id="logoSub">5 ROYAL</span></a>
+  <nav class="main-nav">
+    <button class="nav-button active" data-page="home">HOME</button>
+    <button class="nav-button" data-page="personas">PERSONAS</button>
+    <button class="nav-button" data-page="social">SOCIAL</button>
+    <button class="nav-button" data-page="dungeons" id="dungeonNav">PALACES</button>
+    <button class="nav-button" data-page="calendar">CALENDAR</button>
+  </nav>
+  <div class="persona-switcher" aria-label="Choose Persona">
+    <button class="game-switch active" data-game="p5r">P5R</button>
+    <button class="game-switch" data-game="p4g">P4G</button>
+    <button class="game-switch" data-game="p3r">P3R</button>
+  </div>
+</header>
+<main>
+<section class="page active" data-page-section="home">
+  <div class="hero"><div class="hero-copy"><p class="eyebrow" id="heroEyebrow"></p><h1 id="heroTitle"></h1><p id="heroDescription"></p><button class="primary-button" data-page="personas">ENTER DATABASE</button></div><div class="hero-mark"><span id="heroMark"></span></div></div>
+  <div class="section-heading"><span class="section-number">01</span><h2>QUICK ACCESS</h2></div><div class="quick-grid" id="quickGrid"></div>
+</section>
+<section class="page" data-page-section="personas"><div class="page-heading"><p class="eyebrow">DATABASE</p><h1>PERSONAS</h1><p id="personasIntro"></p></div><div class="content-grid" id="personasGrid"></div></section>
+<section class="page" data-page-section="social"><div class="page-heading"><p class="eyebrow">RELATIONSHIPS</p><h1 id="socialHeading"></h1><p id="socialIntro"></p></div><div class="content-grid" id="socialGrid"></div></section>
+<section class="page" data-page-section="dungeons"><div class="page-heading"><p class="eyebrow" id="dungeonEyebrow"></p><h1 id="dungeonHeading"></h1><p id="dungeonIntro"></p></div><div class="content-grid" id="dungeonGrid"></div></section>
+<section class="page" data-page-section="calendar"><div class="page-heading"><p class="eyebrow">SCHEDULE</p><h1>CALENDAR</h1><p id="calendarIntro"></p></div><div class="calendar-panel"><div class="calendar-month">GUIDE</div><div class="calendar-list" id="calendarList"></div></div></section>
+</main>
+<footer><span>PERSONA GUIDE</span><span id="footerGame"></span></footer>
+<script src="JS.js"></script>
+</body>
+</html>

@@ -3,10 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
 <title>PERSONA GUIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="Style.css">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 </head>
 <body class="theme-p5r">
+<div class="ambient-scene" aria-hidden="true">
+  <canvas id="ambientCanvas"></canvas>
+  <svg class="ambient-svg" viewBox="0 0 1200 800" preserveAspectRatio="none">
+    <circle class="ambient-ring ring-a" cx="980" cy="170" r="150"></circle>
+    <circle class="ambient-ring ring-b" cx="980" cy="170" r="220"></circle>
+    <path class="ambient-line line-a" d="M-100 650 L500 50 L1300 760"></path>
+    <path class="ambient-line line-b" d="M-150 720 L560 120 L1350 690"></path>
+  </svg>
+</div>
 <div class="transition-layer" id="transitionLayer"></div>
 <header class="site-header">
   <a class="logo" href="#" data-page="home"><span class="logo-main">PERSONA</span><span class="logo-sub" id="logoSub">5 ROYAL</span></a>
@@ -35,5 +48,6 @@
 </main>
 <footer><span>PERSONA GUIDE</span><span id="footerGame"></span></footer>
 <script src="JS.js"></script>
+<script src="visuals.js"></script>
 </body>
 </html>

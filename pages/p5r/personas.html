@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<title>PERSONA GUIDE — P5R Personas</title>
+<link rel="stylesheet" href="../../Style.css">
+</head>
+<body class="theme-p5r subpage">
+<div class="ambient-scene" aria-hidden="true"><canvas id="ambientCanvas"></canvas></div>
+<header class="site-header">
+  <a class="logo" href="../../index.html"><span class="logo-main">PERSONA</span><span class="logo-sub">5 ROYAL</span></a>
+  <nav class="main-nav">
+    <a class="nav-button active" href="personas.html">PERSONAS</a>
+    <a class="nav-button" href="confidants.html">CONFIDANTS</a>
+    <a class="nav-button" href="palaces.html">PALACES</a>
+    <a class="nav-button" href="calendar.html">CALENDAR</a>
+  </nav>
+  <div class="persona-switcher"><a class="game-switch active" href="personas.html">P5R</a><a class="game-switch" href="../p4g/personas.html">P4G</a><a class="game-switch" href="../p3r/personas.html">P3R</a></div>
+</header>
+<main>
+  <section class="page active">
+    <div class="page-heading"><p class="eyebrow">PHANTOM THIEVES</p><h1>PERSONAS</h1><p>Browse the Personas available in Persona 5 Royal. Each entry can later expand into a full profile with Arcana, stats, skills, resistances and fusion information.</p></div>
+    <div class="content-grid" id="personaList"></div>
+  </section>
+</main>
+<footer><span>PERSONA GUIDE</span><span>PERSONA 5 ROYAL</span></footer>
+<script src="../../data/p5r/personas.js"></script>
+<script>
+const list=document.getElementById('personaList');
+list.innerHTML=P5R_PERSONAS.map((p,i)=>`<article class="content-card persona-entry"><span class="card-label">${String(i+1).padStart(2,'0')}</span><h3>${p.name}</h3><p>${p.arcana} Arcana · Lv. ${p.level} · ${p.role}</p><span class="card-link">PROFILE COMING SOON →</span></article>`).join('');
+</script>
+</body>
+</html>

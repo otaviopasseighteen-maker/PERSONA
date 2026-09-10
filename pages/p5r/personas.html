@@ -9,9 +9,9 @@
 <style>
 .persona-entry{position:relative;text-decoration:none!important;color:inherit;overflow:hidden;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end}
 .persona-entry:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 55%,rgba(229,9,32,.16));pointer-events:none}
-.persona-entry h3,.persona-entry p,.persona-entry .card-link,.persona-entry .card-label{position:relative;z-index:1}
+.persona-entry h3,.persona-entry p,.persona-entry .card-link,.persona-entry .card-label,.persona-entry .persona-base,.persona-entry .persona-arcana,.persona-entry .persona-hint{position:relative;z-index:1}
 .persona-base{margin-top:12px;color:#fff;font-family:Anton,Impact,sans-serif;font-size:30px;font-weight:400;letter-spacing:1px;text-transform:uppercase}
-.persona-owner{margin-top:5px;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+.persona-arcana{margin-top:5px;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
 .persona-hint{margin-top:14px;color:var(--accent);font-size:10px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}
 </style>
 </head>
@@ -32,7 +32,7 @@
     <div class="page-heading">
       <p class="eyebrow">PHANTOM THIEVES</p>
       <h1>PERSONAS</h1>
-      <p>Each entry starts with the character's base Persona. Open a profile to see its two later evolutions.</p>
+      <p>Explore the initial Persona forms. Open a profile to see each form's two later evolutions.</p>
     </div>
     <div class="content-grid" id="personaList"></div>
   </section>
@@ -42,7 +42,7 @@
 <script src="../../data/p5r/personas.js"></script>
 <script>
 const list=document.getElementById('personaList');
-list.innerHTML=P5R_PERSONAS.map((p,i)=>`<a class="content-card persona-entry" href="personas/${p.id}.html"><span class="card-label">${String(i+1).padStart(2,'0')}</span><div class="persona-base">${p.forms[0]}</div><div class="persona-owner">${p.name} · ${p.arcana} Arcana</div><div class="persona-hint">Open profile →</div></a>`).join('');
+list.innerHTML=P5R_PERSONAS.map((p,i)=>`<a class="content-card persona-entry" href="personas/${p.id}.html"><span class="card-label">${String(i+1).padStart(2,'0')}</span><div class="persona-base">${p.forms[0]}</div><div class="persona-arcana">${p.arcana} Arcana</div><div class="persona-hint">Open profile →</div></a>`).join('');
 </script>
 </body>
 </html>

@@ -1,48 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PERSONA GUIDE — P5R Personas</title>
 <link rel="stylesheet" href="../../Style.css">
 <style>
-.persona-entry{position:relative;text-decoration:none!important;color:inherit;overflow:hidden;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end}
-.persona-entry:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 55%,rgba(229,9,32,.16));pointer-events:none}
-.persona-entry h3,.persona-entry p,.persona-entry .card-link,.persona-entry .card-label,.persona-entry .persona-base,.persona-entry .persona-arcana,.persona-entry .persona-hint{position:relative;z-index:1}
-.persona-base{margin-top:12px;color:#fff;font-family:Anton,Impact,sans-serif;font-size:30px;font-weight:400;letter-spacing:1px;text-transform:uppercase}
-.persona-arcana{margin-top:5px;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
-.persona-hint{margin-top:14px;color:var(--accent);font-size:10px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}
+.persona-entry{position:relative;text-decoration:none!important;color:inherit;overflow:hidden;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;padding:30px!important}
+.persona-entry:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 35%,rgba(229,9,32,.2));pointer-events:none}
+.persona-entry:after{content:"";position:absolute;inset:14px;border:1px solid #ffffff14;pointer-events:none}
+.persona-entry>*{position:relative;z-index:1}.persona-base{margin-top:16px;color:#fff;font-family:Anton,Impact,sans-serif;font-size:clamp(30px,4vw,48px);font-weight:400;letter-spacing:1px;text-transform:uppercase}.persona-arcana{margin-top:8px;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}.persona-hint{margin-top:24px;color:var(--accent);font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase}.persona-entry:hover .persona-hint{letter-spacing:3px}.persona-intro{max-width:780px;color:var(--muted);line-height:1.7}.persona-note{margin-top:10px;color:var(--text);font-size:12px;font-weight:800;letter-spacing:.5px}
 </style>
 </head>
 <body class="theme-p5r subpage">
 <div class="ambient-scene" aria-hidden="true"><canvas id="ambientCanvas"></canvas></div>
-<header class="site-header">
-  <a class="logo" href="../../index.html"><span class="logo-main">PERSONA</span><span class="logo-sub">5 ROYAL</span></a>
-  <nav class="main-nav">
-    <a class="nav-button active" href="personas.html">PERSONAS</a>
-    <a class="nav-button" href="confidants.html">CONFIDANTS</a>
-    <a class="nav-button" href="palaces.html">PALACES</a>
-    <a class="nav-button" href="calendar.html">CALENDAR</a>
-  </nav>
-  <div class="persona-switcher"><a class="game-switch active" href="personas.html">P5R</a><a class="game-switch" href="../p4g/personas.html">P4G</a><a class="game-switch" href="../p3r/personas.html">P3R</a></div>
-</header>
-<main>
-  <section class="page active">
-    <div class="page-heading">
-      <p class="eyebrow">PHANTOM THIEVES</p>
-      <h1>PERSONAS</h1>
-      <p>Explore the initial Persona forms. Open a profile to see each form's two later evolutions.</p>
-    </div>
-    <div class="content-grid" id="personaList"></div>
-  </section>
-</main>
-<footer><span>PERSONA GUIDE</span><span>PERSONA 5 ROYAL</span></footer>
-<script src="../../visuals.js"></script>
-<script src="../../data/p5r/personas.js"></script>
-<script>
-const list=document.getElementById('personaList');
-list.innerHTML=P5R_PERSONAS.map((p,i)=>`<a class="content-card persona-entry" href="personas/${p.id}.html"><span class="card-label">${String(i+1).padStart(2,'0')}</span><div class="persona-base">${p.forms[0]}</div><div class="persona-arcana">${p.arcana} Arcana</div><div class="persona-hint">Open profile →</div></a>`).join('');
-</script>
-</body>
-</html>
+<header class="site-header"><a class="logo" href="../../index.html"><span class="logo-main">PERSONA</span><span class="logo-sub">5 ROYAL</span></a><nav class="main-nav"><a class="nav-button active" href="personas.html">PERSONAS</a><a class="nav-button" href="confidants.html">CONFIDANTS</a><a class="nav-button" href="palaces.html">PALACES</a><a class="nav-button" href="calendar.html">CALENDAR</a></nav><div class="persona-switcher"><a class="game-switch active" href="personas.html">P5R</a><a class="game-switch" href="../p4g/personas.html">P4G</a><a class="game-switch" href="../p3r/personas.html">P3R</a></div></header>
+<main><section class="page active"><div class="page-heading"><p class="eyebrow">PHANTOM THIEVES / PERSONA PROGRESSION</p><h1>PERSONAS</h1><p class="persona-intro">Follow the Phantom Thieves through their Persona awakenings. This section focuses on the Personas themselves: their initial forms, later evolutions and Third Semester awakenings.</p><p class="persona-note">Select a Persona to open its full progression profile.</p></div><div class="content-grid">
+<a class="content-card persona-entry" href="personas/morgana.html"><span class="card-label">01</span><div class="persona-base">ZORRO</div><div class="persona-arcana">MAGICIAN ARCANA</div><div class="persona-hint">OPEN PROFILE →</div></a>
+<a class="content-card persona-entry" href="personas/ryuji.html"><span class="card-label">02</span><div class="persona-base">CAPTAIN KIDD</div><div class="persona-arcana">CHARIOT ARCANA</div><div class="persona-hint">OPEN PROFILE →</div></a>
+<a class="content-card persona-entry" href="personas/ann.html"><span class="card-label">03</span><div class="persona-base">CARMEN</div><div class="persona-arcana">LOVERS ARCANA</div><div class="persona-hint">OPEN PROFILE →</div></a>
+<a class="content-card persona-entry" href="personas/yusuke.html"><span class="card-label">04</span><div class="persona-base">GOEMON</div><div class="persona-arcana">EMPEROR ARCANA</div><div class="persona-hint">OPEN PROFILE →</div></a>
+<a class="content-card persona-entry" href="personas/makoto.html"><span class="card-label">05</span><div class="persona-base">JOHANNA</div><div class="persona-arcana">PRIESTESS ARCANA</div><div class="persona-hint">OPEN PROFILE →</div></a>
+<a class="content-card persona-entry" href="personas/futaba.html"><span class="card-label">06</span><div class="persona-base">NECRONOMICON</div><div class="persona-arcana">HERMIT ARCANA</div><div class="persona-hint">OPEN PROFILE →</div></a>
+<a class="content-card persona-entry" href="personas/haru.html"><span class="card-label">07</span><div class="persona-base">MILADY</div><div class="persona-arcana">EMPRESS ARCANA</div><div class="persona-hint">OPEN PROFILE →</div></a>
+<a class="content-card persona-entry" href="personas/akechi.html"><span class="card-label">08</span><div class="persona-base">ROBIN HOOD</div><div class="persona-arcana">JUSTICE ARCANA</div><div class="persona-hint">OPEN PROFILE →</div></a>
+<a class="content-card persona-entry" href="personas/sumire.html"><span class="card-label">09</span><div class="persona-base">CENDRILLON</div><div class="persona-arcana">FAITH ARCANA</div><div class="persona-hint">OPEN PROFILE →</div></a>
+</div></section></main><footer><span>PERSONA GUIDE</span><span>PERSONA 5 ROYAL</span></footer><script src="../../visuals.js"></script></body></html>

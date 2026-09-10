@@ -5,12 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080808">
 <title>PERSONA GUIDE</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="Style.css">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script src="data/p5r/arcanas.js"></script>
-<script src="data/p5r/personas.js"></script>
 </head>
 <body class="theme-p5r">
 <div class="ambient-scene" aria-hidden="true">
@@ -24,32 +20,41 @@
 </div>
 <div class="transition-layer" id="transitionLayer"></div>
 <header class="site-header">
-  <a class="logo" href="#" data-page="home"><span class="logo-main">PERSONA</span><span class="logo-sub" id="logoSub">5 ROYAL</span></a>
+  <a class="logo" href="index.html"><span class="logo-main">PERSONA</span><span class="logo-sub">5 ROYAL</span></a>
   <nav class="main-nav">
-    <button class="nav-button active" data-page="home">HOME</button>
-    <button class="nav-button" data-page="personas">PERSONAS</button>
-    <button class="nav-button" data-page="social">SOCIAL</button>
-    <button class="nav-button" data-page="dungeons" id="dungeonNav">PALACES</button>
-    <button class="nav-button" data-page="calendar">CALENDAR</button>
+    <a class="nav-button active" href="index.html">HOME</a>
+    <a class="nav-button" href="pages/p5r/personas.html">PERSONAS</a>
+    <a class="nav-button" href="pages/p5r/confidants.html">CONFIDANTS</a>
+    <a class="nav-button" href="pages/p5r/palaces.html">PALACES</a>
+    <a class="nav-button" href="pages/p5r/calendar.html">CALENDAR</a>
   </nav>
-  <div class="persona-switcher" aria-label="Choose Persona">
-    <button class="game-switch active" data-game="p5r">P5R</button>
-    <button class="game-switch" data-game="p4g">P4G</button>
-    <button class="game-switch" data-game="p3r">P3R</button>
+  <div class="persona-switcher" aria-label="Choose Persona game">
+    <a class="game-switch active" href="index.html">P5R</a>
+    <a class="game-switch" href="pages/p4g/personas.html">P4G</a>
+    <a class="game-switch" href="pages/p3r/personas.html">P3R</a>
   </div>
 </header>
 <main>
-<section class="page active" data-page-section="home">
-  <div class="hero"><div class="hero-copy"><p class="eyebrow" id="heroEyebrow"></p><h1 id="heroTitle"></h1><p id="heroDescription"></p><button class="primary-button" data-page="personas">ENTER DATABASE</button></div><div class="hero-mark"><span id="heroMark"></span></div></div>
-  <div class="section-heading"><span class="section-number">01</span><h2>QUICK ACCESS</h2></div><div class="quick-grid" id="quickGrid"></div>
+<section class="page active">
+  <div class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">PHANTOM THIEVES GUIDE</p>
+      <h1>PERSONA 5<br><span>ROYAL</span></h1>
+      <p>A complete guide interface for Personas, Confidants, Palaces and the calendar.</p>
+      <a class="primary-button" href="pages/p5r/personas.html">EXPLORE PERSONAS</a>
+    </div>
+    <div class="hero-mark"><span>P5R</span></div>
+  </div>
+  <div class="section-heading"><span class="section-number">01</span><h2>QUICK ACCESS</h2></div>
+  <div class="quick-grid">
+    <a class="quick-card" href="pages/p5r/personas.html"><span class="card-label">01</span><h3>PERSONAS</h3><p>Browse Personas, Arcana and fusion information.</p><span class="card-link">OPEN →</span></a>
+    <a class="quick-card" href="pages/p5r/confidants.html"><span class="card-label">02</span><h3>CONFIDANTS</h3><p>Track ranks, abilities and relationship guidance.</p><span class="card-link">OPEN →</span></a>
+    <a class="quick-card" href="pages/p5r/palaces.html"><span class="card-label">03</span><h3>PALACES</h3><p>Explore Palace routes, targets and Shadow encounters.</p><span class="card-link">OPEN →</span></a>
+    <a class="quick-card" href="pages/p5r/calendar.html"><span class="card-label">04</span><h3>CALENDAR</h3><p>Plan activities, deadlines and important events.</p><span class="card-link">OPEN →</span></a>
+  </div>
 </section>
-<section class="page" data-page-section="personas"><div class="page-heading"><p class="eyebrow">DATABASE</p><h1>PERSONAS</h1><p id="personasIntro"></p></div><div class="content-grid" id="personasGrid"></div></section>
-<section class="page" data-page-section="social"><div class="page-heading"><p class="eyebrow">RELATIONSHIPS</p><h1 id="socialHeading"></h1><p id="socialIntro"></p></div><div class="content-grid" id="socialGrid"></div></section>
-<section class="page" data-page-section="dungeons"><div class="page-heading"><p class="eyebrow" id="dungeonEyebrow"></p><h1 id="dungeonHeading"></h1><p id="dungeonIntro"></p></div><div class="content-grid" id="dungeonGrid"></div></section>
-<section class="page" data-page-section="calendar"><div class="page-heading"><p class="eyebrow">SCHEDULE</p><h1>CALENDAR</h1><p id="calendarIntro"></p></div><div class="calendar-panel"><div class="calendar-month">GUIDE</div><div class="calendar-list" id="calendarList"></div></div></section>
 </main>
-<footer><span>PERSONA GUIDE</span><span id="footerGame"></span></footer>
-<script src="JS.js"></script>
+<footer><span>PERSONA GUIDE</span><span>PERSONA 5 ROYAL</span></footer>
 <script src="visuals.js"></script>
 </body>
 </html>

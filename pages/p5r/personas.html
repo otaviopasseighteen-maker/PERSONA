@@ -7,12 +7,11 @@
 <title>PERSONA GUIDE — P5R Personas</title>
 <link rel="stylesheet" href="../../Style.css">
 <style>
-.persona-entry{position:relative;text-decoration:none;color:inherit;overflow:hidden;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end}
+.persona-entry{position:relative;text-decoration:none!important;color:inherit;overflow:hidden;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end}
 .persona-entry:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 55%,rgba(229,9,32,.16));pointer-events:none}
 .persona-entry h3,.persona-entry p,.persona-entry .card-link,.persona-entry .card-label{position:relative;z-index:1}
-.persona-forms{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px;color:#fff;font-size:12px;font-weight:800;letter-spacing:.5px}
-.persona-forms span{padding:7px 9px;background:#ffffff0d;border-left:2px solid var(--accent)}
-.persona-rank{margin-top:10px;color:var(--accent);font-size:10px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+.persona-base{margin-top:12px;color:#fff;font-size:18px;font-weight:900;letter-spacing:.5px;text-transform:uppercase}
+.persona-hint{margin-top:5px;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
 </style>
 </head>
 <body class="theme-p5r subpage">
@@ -32,7 +31,7 @@
     <div class="page-heading">
       <p class="eyebrow">PHANTOM THIEVES</p>
       <h1>PERSONAS</h1>
-      <p>The Personas that matter most to the story: the evolutions belonging to the Phantom Thieves and their allies.</p>
+      <p>Choose a character to explore their Persona progression. The list shows only each character's starting Persona; the complete evolution is inside the profile.</p>
     </div>
     <div class="content-grid" id="personaList"></div>
   </section>
@@ -42,7 +41,7 @@
 <script src="../../data/p5r/personas.js"></script>
 <script>
 const list=document.getElementById('personaList');
-list.innerHTML=P5R_PERSONAS.map((p,i)=>`<a class="content-card persona-entry" href="personas/${p.id}.html"><span class="card-label">${String(i+1).padStart(2,'0')}</span><h3>${p.name}</h3><p>${p.arcana} Arcana</p><div class="persona-forms">${p.forms.map((form,index)=>`<span>${form}</span>`).join('')}</div><div class="persona-rank">${p.rank}</div><span class="card-link">OPEN PROFILE →</span></a>`).join('');
+list.innerHTML=P5R_PERSONAS.map((p,i)=>`<a class="content-card persona-entry" href="personas/${p.id}.html"><span class="card-label">${String(i+1).padStart(2,'0')}</span><h3>${p.name}</h3><p>${p.arcana} Arcana</p><div class="persona-base">${p.forms[0]}</div><div class="persona-hint">Open Persona profile →</div></a>`).join('');
 </script>
 </body>
 </html>
